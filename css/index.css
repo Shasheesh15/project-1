@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #444;
+}
+
+.index--box {
+  border: 2px solid red;
+  background-color: rgba(218, 204, 10, 0.349);
+}
+
+.index--container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100vh 90vh 90vh 100vh;
+  grid-template-areas:
+    "hd hd hd hd"
+    "topB topB topB topB"
+    "mrb mrb mrb mrb"
+    "nb nb nb nb";
+}
+
+/************************/
+/****** COMPONENTS ******/
+/************************/
+.row_main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/************************/
+/******* HEADER *********/
+/************************/
+
+.index--header {
+  position: relative;
+  height: 100vh;
+  grid-area: hd;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/image001.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.index--header--nav ul {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.index--header--nav li a:link,
+.index--header--nav li a:visited {
+  color: #fff;
+  margin-right: 70px;
+  font-size: 150%;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.index--header--nav li a:hover,
+.index--header--nav li a:active {
+  border-bottom: 4px solid rgb(6, 71, 212);
+}
+
+.index--heading--box {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.index--main--heading {
+  font-size: 800%;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-weight: 100;
+  letter-spacing: 20px;
+}
+
+.index--sub--heading {
+  font-size: 200%;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  width: max-content;
+  display: block;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin-bottom: 40px;
+}
+
+.index-btn-main:link,
+.index-btn-main:visited {
+  margin-top: 40px;
+  border-radius: 50px;
+  background-color: rgba(4, 39, 134, 0.363);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+
+.index-btn-main:hover,
+.index-btn-main:active {
+  background-color: rgb(4, 39, 134);
+}
+
+/************************/
+/******* SECTION ********/
+/************************/
+
+.index--section--topb {
+  grid-area: topB;
+  text-align: center;
+  background-color: rgba(155, 155, 155, 0.342);
+}
+
+.section--topB--Heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.section--top--bravellers {
+  margin-top: 50px;
+}
+
+.topB-para {
+  font-style: italic;
+  font-family: "Open Sans";
+  font-weight: 700;
+  padding: 10px;
+}
+
+/****************************/
+/*********** MOST-READ*******/
+/****************************/
+
+.most-read {
+  grid-area: mrb;
+  text-align: center;
+}
+
+.most-read-heading {
+  font-style: italic;
+  font-family: "Open Sans";
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.most-read-bravels {
+  margin-top: px;
+}
+
+.most-read-para {
+  font-weight: 700;
+  padding: 20px 10px;
+}
+
+/**********************/
+/**** NEW BRAVELS *****/
+/**********************/
+
+.new-bravels {
+  background-color: rgba(68, 68, 68, 0.411);
+  grid-area: nb;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 40% 40%;
+  grid-template-areas:
+    "heading"
+    "nb1"
+    "nb2";
+  justify-content: center;
+  align-items: center;
+}
+
+.new-bravels-heading {
+  display: flex;
+  grid-area: heading;
+  justify-content: center;
+}
+
+.new-bravel-one {
+  display: flex;
+  grid-area: nb1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.new-bravel-two {
+  display: flex;
+  grid-area: nb2;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
